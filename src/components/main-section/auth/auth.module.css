@@ -1,0 +1,119 @@
+/* Стили для окна входа*/
+.form_container {
+    position: relative;
+  }
+  
+  .auth_container {
+      background-color: #e7e7e7;
+      height: 100vh;
+      padding: 50px;
+    }
+    
+    .auth_form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: auto;
+      background-color: #fff;
+      width: 40vw;
+      max-width: 500px;
+      border-radius: 5px;
+      box-shadow: 5px 5px 10px #ccc;
+      padding: 10px 40px 20px;
+    }
+    
+    .auth_form > label > button {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      outline: none;
+      border: none;
+      box-shadow: 2px 2px 2px 0px rgba(34, 60, 80, 0.1);
+      width: 180px;
+      height: 40px;
+      background-color: #444;
+      color: #cccccc;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      font-size: 103%;
+      transition-duration: 0.4s;
+      margin: 20px;
+      padding: 20px;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+    
+    .auth_form > div {
+      display: flex;
+      align-items: center;
+    }
+    
+    .auth_form > div > img {
+      height: 50px;
+    }
+    
+    .auth_error {
+      font-weight: 300;
+      color: red;
+      margin: 10px;
+    }
+  
+  .form_footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 300;
+  }
+  
+  .auth_anchor {
+    color: #90caf9;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    &:hover {
+      color: #cfcfcf;
+    }
+  }
+  
+  @media (max-width: 768px) {
+  
+    .auth_container {
+      background-color: #ffffff;
+      padding: 0px;
+      margin: 0px;
+      height: max-content;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .auth_form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: 0px;
+      background-color: #ffffff;
+      width: 100vw !important; 
+      /* max-width: none; */
+      border-radius: 0px;
+      box-shadow: 0px 0px 0px #ccc;
+      padding: 10px 20px 20px;
+    }
+  
+    .form_footer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 15px;
+      font-weight: 300;
+    }
+
+  }
+  
+    

@@ -1,0 +1,67 @@
+/* Стили для верхнего колонтитула */
+header {
+    background-color: #111;
+    color: #fff;
+    margin: 0px;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: space-between;
+  
+  }
+  
+header > div {
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    font-weight: 200;
+    gap: 10px;
+  }
+  
+.reg_auth_anchors {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    width: 180px;
+    white-space: nowrap;
+    &:hover {
+      color: #a9a9a9;
+    }
+  }
+  
+header > div > div {
+    display: flex;
+    justify-content: center;
+  }
+  
+@media (max-width: 768px) {
+  header {
+    margin: 0px;
+    padding: 0px 0px;
+    text-align: center;
+    font-size: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  header > div {
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    font-weight: 200;
+    gap: 0px;
+  }
+
+  .reg_auth_anchors {
+    width: 100vw;
+  }
+}
+  

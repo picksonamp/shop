@@ -1,0 +1,100 @@
+/* Стили для футера */
+.footer {
+  background-color: #444;
+  padding: 40px 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer_sections {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer_section {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer_section > h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+
+.footer_section > ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer_section > ul > li {
+  margin-bottom: 10px;
+}
+
+.footer_section > ul > li > a {
+  color: #aeaeae;
+  text-decoration: none;
+}
+
+.footer_section > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+.footer_section > p {
+  margin: 5px 0;
+}
+
+.footer_section > form {
+  display: flex;
+}
+
+.footer_section_email {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px 0 0 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.footer_section_button {
+  padding: 10px;
+  border: none;
+  background-color: #181818;
+  color: #ffffff;
+  border-radius: 0 5px 5px 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.footer_social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer_social > a {
+  margin: 0 10px;
+}
+
+.footer_social > img {
+  width: 24px;
+  height: auto;
+}
+
+.footer_bottom {
+  text-align: center;
+}
+
+.footer_bottom > p {
+  color: #d2d2d2;
+  font-weight: 300;
+}

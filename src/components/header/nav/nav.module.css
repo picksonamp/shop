@@ -1,0 +1,32 @@
+/* Стили для навигации */
+.navigation {
+  color: #fff;
+  font-weight: 200;
+  padding: 10px 0;
+}
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.list > li {
+  margin: 0 15px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  &:hover {
+    color: #a9a9a9;
+  }
+}
+
+.active {
+  color: #2c5d94;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  
+}
