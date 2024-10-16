@@ -23,8 +23,8 @@ const SkeletonCard = () => {
 
       <div className={style.skeleton_card_content}>
         <Skeleton className={style.skeleton_card_title} />
-        <Skeleton className={style.card_footer} />
-        <Skeleton className={style.skeleton_card_price} />
+        <Skeleton className={style.skeleton_card_title} />
+        <Skeleton className={style.skeleton_card_title} />
       </div>
 
     </div>

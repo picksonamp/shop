@@ -42,7 +42,7 @@ export default function Cards() {
 
 
             <div className={style.cards}>
-                {loading ? 
+                {true ? 
                     Array(9)
                         .fill('')
                         .map((item, index) => <SkeletonCard key={index} />) 

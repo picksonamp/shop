@@ -2,7 +2,7 @@
 .skeleton_card {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -35,34 +35,21 @@
   padding: 1px;
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 80%;
 
 }
 
 /* Стили для названия товара */
 .skeleton_card_title {
-  font-size: 60%;
+  font-size: 100%;
   margin-bottom: 10px;
 }
 
-.card_footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  font-size: 70%;
-}
-
-/* Стили для цены товара */
-.skeleton_card_price {
-  font-size: 50%;
-}
-
-
 @media (max-width: 768px) {
   .skeleton_card {
-      width: calc(150px + (150 - 100) * ((100vw - 320px) / (1200 - 320)));
-      height: 250px;
+    width: calc(165px + (165 - 100) * ((100vw - 320px) / (1200 - 320)));
+    height: 250px;
+    margin: 10px 2px;
   }
 
   .skeleton_card_image_container {
@@ -79,25 +66,13 @@
     padding: 1px;
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 80%;
    }
 
-  .card_footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    font-size: 50%;
-  }
-
   .skeleton_card_title {
-    font-size: 50%;
+    font-size: 70%;
     margin-bottom: 0px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-  }
-
-  .skeleton_card_price {
-    font-size: 50%;
   }
 }
