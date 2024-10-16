@@ -10,6 +10,19 @@
     transition-duration: 0.6s;
     font-weight: 300;
   }
+
+  h3 {
+    margin: 5px 0 5px 5px;
+  }
+
+  .checked_category {
+    color: #2c5d94;
+  }
+
+  hr {
+    height: 0.2px;
+    opacity: 0.7;
+  }
   
 .categories > div {
     padding-left: 10px;
@@ -22,7 +35,7 @@
 
 @media (max-width: 768px) {
   .categories {
-    margin: 10px 20px 0px 20px;
+    margin: 7px 17px 0px 17px;
     padding: 5px 20px 30px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -31,5 +44,9 @@
     box-shadow: 2px 2px 2px 0px rgba(34, 60, 80, 0.1);
     transition-duration: 0.6s;
     font-weight: 300;
+  }
+
+  h3 {
+    margin: 5px 0 0 5px;
   }
 }

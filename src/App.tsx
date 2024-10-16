@@ -9,7 +9,6 @@ import Header from './components/header/header';
 import HomePage from './components/main-section/home-page/home-page';
 import Footer from './components/footer/footer';
 // import FullCard from './components/fullCard';
-// import Auth from './components/main-section/auth/auth';
 
 const Cards = lazy(() => import('./components/cards/Cards'))
 const Contacts = lazy(() => import('./components/main-section/contacts'))
@@ -41,14 +40,6 @@ function App() {
       .catch(err => console.error(err, 'Products not found'))
   }, [])
 
-  // React.useEffect(() => {
-  //   fetch('http://localhost:3000')
-  //     .then(res => res.json())
-  //     .then(json => setFirstAnswer(json))
-  //     .then(() => console.log(firstAnswer))
-  //     .catch(err => console.error(err, 'Answer not found'))
-  // }, [])
-
   const value: Value = {
     products,
     setProducts
@@ -71,12 +62,12 @@ function App() {
 
             <Route path='cards' element={<Cards />} />
 
-            <Route path='contacts' element={<Suspense fallback={<p>Loding...</p>}><Contacts /></Suspense>} />
+            <Route path='contacts' element={<Suspense fallback={<p>Loading...</p>}><Contacts /></Suspense>} />
 
             <Route 
               path='auth' 
               element={
-                <Suspense fallback={<p>Loding...</p>}>
+                <Suspense fallback={<p>Loading...</p>}>
                   <Auth 
                     currentUser={currentUser}
                     setCurrentUser={setCurrentUser}
@@ -87,7 +78,7 @@ function App() {
             <Route
               path='registration'
               element={
-                <Suspense fallback={<p>Loding...</p>}>
+                <Suspense fallback={<p>Loading...</p>}>
                   <Registration
                     currentUser={currentUser}
                     setCurrentUser={setCurrentUser}
@@ -101,7 +92,7 @@ function App() {
               <Route
                 path='registration-success'
                 element={
-                  <Suspense fallback={<p>Loding...</p>}>
+                  <Suspense fallback={<p>Loading...</p>}>
                     <RegistrationSuccess />
                   </Suspense>
                 } />

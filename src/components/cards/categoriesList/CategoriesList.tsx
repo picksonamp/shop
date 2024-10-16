@@ -26,7 +26,9 @@ export const CategoriesList: React.FC<CategoriesListProps & CategoryStateProps> 
 
     return (
         <div className={style.categories}>
-            <h3>Выбрана категория: {!category ? 'All' : firstLetterToUpperCase(category)}</h3>
+            <h3>Выбрана категория:</h3> 
+            <h3 className={style.checked_category}>{!category ? 'All' : firstLetterToUpperCase(category)}</h3>
+            <hr></hr>
             <div onClick={() => setCategory('')}>All</div>
             {
                 categories.map((cat, index) => (
