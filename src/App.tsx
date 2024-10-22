@@ -8,7 +8,6 @@ import User from './data/interfaces/user';
 import Header from './components/header/header';
 import HomePage from './components/main-section/home-page/home-page';
 import Footer from './components/footer/footer';
-// import FullCard from './components/fullCard';
 
 const Cards = lazy(() => import('./components/cards/Cards'))
 const Contacts = lazy(() => import('./components/main-section/contacts'))
@@ -17,10 +16,21 @@ const PrivateRoute = lazy(() => import('./components/header/privateRoute/private
 const RegistrationSuccess = lazy(() => import('./components/main-section/registration/registrationSuccess'))
 const PerssonalAccount = lazy(() => import('./components/main-section/personalAccount/personalAccount'))
 const Auth = lazy(() => import('./components/main-section/auth/auth'))
+const FullCard = lazy(() => import('./components/FullCard/fullCard'))
 
 function App() {
 
   const [products, setProducts] = React.useState<Product[]>([])
+  const [currentProduct, setCurrentProduct] = React.useState<Product>(
+    {
+        category: '',
+        description: '',
+        id: NaN,
+        image: '',
+        price: NaN,
+        title: '',
+    }
+  )
   const [auth, setAuth] = React.useState(false)
   const [currentUser, setCurrentUser] = React.useState<User>(
     {
@@ -61,8 +71,16 @@ function App() {
             <Route index path='/' element={<HomePage />} />
 
             <Route path='cards' element={<Cards />} />
+{/* 
+            <Route path='contacts' element={<Suspense fallback={<p>Loading...</p>}><Contacts /></Suspense>} /> */}
 
-            <Route path='contacts' element={<Suspense fallback={<p>Loading...</p>}><Contacts /></Suspense>} />
+            <Route 
+              path='full_card' 
+              element=
+                {
+                  <Suspense fallback={<p>Loading...</p>}>
+                    <FullCard {...currentProduct}  />
+                  </Suspense>} />
 
             <Route 
               path='auth' 
@@ -110,6 +128,7 @@ function App() {
                   </Suspense>
                 }
               />
+
             </Route>
 
             

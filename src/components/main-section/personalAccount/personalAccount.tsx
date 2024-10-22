@@ -4,7 +4,7 @@ import { authProps } from '../../header/header'
 import { useNavigate } from 'react-router-dom'
 
 const PerssonalAccount: React.FC<authProps> = ({ auth, setAuth, currentUser, setCurrentUser }) => {
-    
+
     const navigate = useNavigate()
 
     const handlerClick = () => {
@@ -23,21 +23,26 @@ const PerssonalAccount: React.FC<authProps> = ({ auth, setAuth, currentUser, set
     }
 
     return (
+
         <div className={style.main}>
+
             <h1>Личный кабинет</h1>
-            <p>Ваше имя {currentUser.name}</p>
-            <p>Ваша фамилия: {currentUser.surname}</p>
-            <p>Ваша корзина:</p>
+
+            <div>
+                <p>Ваше имя {currentUser.name}</p>
+                <p>Ваша фамилия: {currentUser.surname}</p>
+                <p>Ваша корзина:</p>
+
+            </div>
 
             <Button
-                className={style.button} 
+                className={style.button}
                 variant="contained"
                 onClick={handlerClick}>
-                    Выйти
+                Выйти
             </Button>
 
         </div>
-
 
     )
 }
