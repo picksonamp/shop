@@ -28,5 +28,7 @@
 }
 
 @media (max-width: 768px) {
-  
+  .navigation {
+    font-size: 1.3em;
+  }
 }

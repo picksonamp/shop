@@ -55,7 +55,7 @@ function App() {
           currentUser={currentUser}
           setCurrentUser={setCurrentUser} />
 
-        <Suspense fallback={<p>Loding...</p>}>
+        <Suspense fallback={<p>Loading...</p>}>
           <Routes>
 
             <Route index path='/' element={<HomePage />} />
@@ -100,7 +100,7 @@ function App() {
               <Route
                 path='personal-account'
                 element={
-                  <Suspense fallback={<p>Loding...</p>}>
+                  <Suspense fallback={<p>Loading...</p>}>
                     <PerssonalAccount />
                   </Suspense>
                 }

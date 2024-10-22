@@ -7,7 +7,7 @@ interface PrivateRouteProps {
 
 const PrivateRoute: React.FC<PrivateRouteProps> = ({auth}) => {
     return(
-        auth ? <Outlet/> : <Navigate to='/registration'/>
+        auth ? <Outlet/> : <Navigate to='/auth'/>
     )
 }
 
