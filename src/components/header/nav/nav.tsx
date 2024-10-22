@@ -16,7 +16,7 @@ export default function Nav() {
             link: 'cards'
         },
         {
-            title: 'Личный кабинет',
+            title: 'Аккаунт',
             link: 'personal-account'
         }
     ];

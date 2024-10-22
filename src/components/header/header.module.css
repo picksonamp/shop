@@ -10,7 +10,6 @@ header {
     flex-direction: row;
     overflow: hidden;
     justify-content: space-between;
-  
   }
   
 header > div {
@@ -62,6 +61,7 @@ header > div > div {
 
   .reg_auth_anchors {
     width: 100vw;
+    display: none;
   }
 }
   
