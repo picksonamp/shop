@@ -101,7 +101,12 @@ function App() {
                 path='personal-account'
                 element={
                   <Suspense fallback={<p>Loading...</p>}>
-                    <PerssonalAccount />
+                    <PerssonalAccount
+                      auth={auth}
+                      setAuth={setAuth}
+                      currentUser={currentUser}
+                      setCurrentUser={setCurrentUser}
+                    />
                   </Suspense>
                 }
               />

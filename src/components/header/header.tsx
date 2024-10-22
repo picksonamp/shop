@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Nav from "./nav/nav";
 import style from './header.module.css'
 
-interface authProps {
+export interface authProps {
     auth: boolean,
     setAuth: React.Dispatch<React.SetStateAction<boolean>>
     currentUser: User,
