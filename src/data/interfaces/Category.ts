@@ -1,7 +1,8 @@
-import Product from "./Product"
+import IProduct from "./Product"
 
 
 export default interface Value {
-  products: Product[],
-  setProducts: React.Dispatch<React.SetStateAction<Product[]>>
+  products: IProduct[],
+  setProducts: React.Dispatch<React.SetStateAction<IProduct[]>>
+  setCurrentProduct: React.Dispatch<React.SetStateAction<IProduct>>
 }

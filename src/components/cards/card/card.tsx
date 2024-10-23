@@ -2,29 +2,33 @@ import React, { FC, useContext } from "react";
 import Data from "../../../data/context/context";
 import Product from "../../../data/interfaces/Product";
 import style from './card.module.css';
+import { useNavigate } from "react-router-dom";
 
-const Card: React.FC<Product> = ({ id, title, price, description, image, category }) => {
+
+const Card: React.FC<Product> = ({ id, title, price, description, image, category}) => {
 
     const value = useContext(Data);
+
+    const navigate = useNavigate();
 
     const [buttonStyle, setButtonStyle] = React.useState("style.purchase_button_add")
     const [buttonText, setButtonText] = React.useState("Buy")
 
-    // const handleOpenDescription = (e: React.MouseEvent<HTMLDivElement>) => {
-    //     console.log(e.currentTarget.id)
-    //     // window.location.href = 'card_description'
-    // }
+    const handleClick = () => {
 
-    // const handleClick = function () {
-    //     if (buttonStyle === {style.purchase_button_delete}) {
-    //         setButtonStyle({style.purchase_button_add})
-    //         setButtonText('Buy')
-    //     }
-    //     else {
-    //         setButtonStyle({style.purchase_button_delete})
-    //         setButtonText('X')
-    //     }
-    // }
+        value.setCurrentProduct(  {
+            category,
+            description,
+            id,
+            image,
+            price,
+            title,
+          }
+        )
+        
+        navigate('/full_card')
+    }
+
 
     return (
         <div
@@ -45,7 +49,7 @@ const Card: React.FC<Product> = ({ id, title, price, description, image, categor
                     <div className={style.product_card_price}>{price + '$'}</div>
                     <button 
                         className={style.purchase_button_add} 
-                        // onClick={handleClick}
+                        onClick={handleClick}
                     >
                             {buttonText}
                     </button>
