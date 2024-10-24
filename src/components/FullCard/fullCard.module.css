@@ -1,0 +1,60 @@
+.full_card {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    padding: 20px;
+    font-weight: 300;
+    gap: 10px;
+    height: 100vh;
+}
+
+.image {
+    height: 500px;
+    width: auto; /* Устанавливаем ширину в авто для сохранения пропорций */
+    object-fit: cover; /* Используем object-fit для сохранения пропорций */
+}
+
+.full_decription {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;    
+}
+
+.card_title{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.button {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 2px 0px rgba(34, 60, 80, 0.1);
+    width: 180px;
+    height: 40px;
+    background-color: #444;
+    color: #cccccc;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 103%;
+    transition-duration: 0.4s;
+    margin: 20px;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+@media (max-width: 768px) {
+    .full_card {
+        flex-direction: column;
+        height: max-content;  /*при большом описании кнопки выходят за пределы и накладываются на footer */
+    }
+
+    .image {
+        height: 300px;
+        width: 100%; /* Устанавливаем ширину изображения на 100% */
+        height: auto; /* Высота автоматически подстраивается для сохранения пропорций */
+    }
+}

@@ -25,6 +25,11 @@ const Card: React.FC<Product> = ({ id, title, price, description, image, categor
             title,
           }
         )
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'auto' // для прокрутки вверх т.к. после выбора таваров в конце страницыб карточка товара, при переходе на нее, отображается внизу 
+          })
         
         navigate('/full_card')
     }

@@ -75,8 +75,8 @@ function App() {
             <Route index path='/' element={<HomePage />} />
 
             <Route path='cards' element={<Cards />} />
-            {/* 
-            <Route path='contacts' element={<Suspense fallback={<p>Loading...</p>}><Contacts /></Suspense>} /> */}
+            
+            <Route path='contacts' element={<Suspense fallback={<p>Loading...</p>}><Contacts /></Suspense>} />
 
             <Route
               path='full_card'
