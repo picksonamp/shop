@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkshop=self.webpackChunkshop||[]).push([[380],{5380:(s,e,n)=>{n.r(e),n.d(e,{default:()=>a});var c=n(579);function a(){return(0,c.jsx)("div",{className:"main",children:(0,c.jsx)("h1",{children:"PessonalAccount"})})}}}]);
-//# sourceMappingURL=380.de607c57.chunk.js.map

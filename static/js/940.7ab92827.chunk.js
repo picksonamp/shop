@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkshop=self.webpackChunkshop||[]).push([[940],{5940:(s,t,e)=>{e.r(t),e.d(t,{default:()=>a});var r=e(3216),u=e(579);const a=s=>{let{auth:t}=s;return t?(0,u.jsx)(r.sv,{}):(0,u.jsx)(r.C5,{to:"/registration"})}}}]);
-//# sourceMappingURL=940.7ab92827.chunk.js.map
