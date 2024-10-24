@@ -8,6 +8,7 @@ import User from './data/interfaces/user';
 import Header from './components/header/header';
 import HomePage from './components/main-section/home-page/home-page';
 import Footer from './components/footer/footer';
+import Loading from './components/main-section/loading/Loading';
 
 const Cards = lazy(() => import('./components/cards/Cards'))
 const Contacts = lazy(() => import('./components/main-section/contacts'))
@@ -16,7 +17,7 @@ const PrivateRoute = lazy(() => import('./components/header/privateRoute/private
 const RegistrationSuccess = lazy(() => import('./components/main-section/registration/registrationSuccess'))
 const PerssonalAccount = lazy(() => import('./components/main-section/personalAccount/personalAccount'))
 const Auth = lazy(() => import('./components/main-section/auth/auth'))
-const FullCard = lazy(() => import('./components/FullCard/FullCard'))
+const FullCard = lazy(() => import('./components/main-section/FullCard/fullCard'))
 
 function App() {
 
@@ -55,9 +56,10 @@ function App() {
 
   const value: Value = {
     products,
-    setProducts, 
+    setProducts,
     setCurrentProduct
   }
+
 
   return (
     <>
@@ -69,20 +71,20 @@ function App() {
           currentUser={currentUser}
           setCurrentUser={setCurrentUser} />
 
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense fallback={<Loading />}>
           <Routes>
 
             <Route index path='/' element={<HomePage />} />
 
             <Route path='cards' element={<Cards />} />
-            
-            <Route path='contacts' element={<Suspense fallback={<p>Loading...</p>}><Contacts /></Suspense>} />
+
+            <Route path='contacts' element={<Suspense fallback={<Loading />}><Contacts /></Suspense>} />
 
             <Route
               path='full_card'
               element=
               {
-                <Suspense fallback={<p>Loading...</p>}>
+                <Suspense fallback={<Loading />}>
                   <FullCard
                     {...currentProduct}
                   />
@@ -91,7 +93,7 @@ function App() {
             <Route
               path='auth'
               element={
-                <Suspense fallback={<p>Loading...</p>}>
+                <Suspense fallback={<Loading />}>
                   <Auth
                     currentUser={currentUser}
                     setCurrentUser={setCurrentUser}
@@ -102,7 +104,7 @@ function App() {
             <Route
               path='registration'
               element={
-                <Suspense fallback={<p>Loading...</p>}>
+                <Suspense fallback={<Loading />}>
                   <Registration
                     currentUser={currentUser}
                     setCurrentUser={setCurrentUser}
@@ -116,7 +118,7 @@ function App() {
               <Route
                 path='registration-success'
                 element={
-                  <Suspense fallback={<p>Loading...</p>}>
+                  <Suspense fallback={<Loading />}>
                     <RegistrationSuccess />
                   </Suspense>
                 } />
@@ -124,7 +126,7 @@ function App() {
               <Route
                 path='personal-account'
                 element={
-                  <Suspense fallback={<p>Loading...</p>}>
+                  <Suspense fallback={<Loading />}>
                     <PerssonalAccount
                       auth={auth}
                       setAuth={setAuth}

@@ -1,7 +1,7 @@
 import React, { FC, useContext } from "react";
-import Data from "../../data/context/context";
-import Product from "../../data/interfaces/Product";
-import style from './FullCard.module.css'
+import Data from "../../../data/context/context";
+import Product from "../../../data/interfaces/Product";
+import style from './fullCard.module.css'
 import { useNavigate } from "react-router-dom";
 
 const FullCard: FC<Product> = ({ title, price, description, image, category }) => {
