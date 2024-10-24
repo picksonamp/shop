@@ -18,21 +18,19 @@
 }
 
 .image_container {
-    width: 400px;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    /* object-fit: contain; */
-    /* margin-left: auto; */
-    /* Align-self: center;  */
-    
+    /* width: 100%;  */
+    height: auto; 
+    overflow: hidden; /* предотвращает выход изображения за пределы контейнера */
+    display: flex;
+    justify-content: center;
 }
 
 /* Стили для изображения товара */
 .image {
     width: 100%;
-    /* height: auto; */
-
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: contain;
 }
 
 

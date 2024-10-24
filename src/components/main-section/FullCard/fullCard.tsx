@@ -10,7 +10,14 @@ const FullCard: FC<Product> = ({ title, price, description, image, category }) =
 
     const value = useContext(Data);
 
-    const handlerClick = () => navigate('/cards')
+    const handlerClick = () => {
+
+        window.scrollTo({
+            top: 0,
+        });
+
+        navigate('/cards')
+    }
 
     const handlerAddToChart = () => {} 
 
