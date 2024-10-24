@@ -2,17 +2,39 @@
     display: flex;
     justify-content: space-evenly;
     margin-top: 30px;
+    margin: auto;
     padding: 20px;
     font-weight: 300;
     gap: 10px;
     height: 100vh;
+    max-width: 1600px;
 }
 
-.image {
+
+.imag {
     height: 500px;
     width: auto; /* Устанавливаем ширину в авто для сохранения пропорций */
     object-fit: cover; /* Используем object-fit для сохранения пропорций */
 }
+
+.image_container {
+    width: 400px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* object-fit: contain; */
+    /* margin-left: auto; */
+    /* Align-self: center;  */
+    
+}
+
+/* Стили для изображения товара */
+.image {
+    width: 100%;
+    /* height: auto; */
+
+}
+
 
 .full_decription {
     display: flex;

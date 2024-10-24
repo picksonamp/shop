@@ -16,18 +16,20 @@ const FullCard: FC<Product> = ({ title, price, description, image, category }) =
 
     return (
         <div className={style.full_card} >
-            <img className={style.image} src={image}></img>
+            <div className={style.image_container}>
+                <img className={style.image} src={image} />
+            </div>
+
             <div className={style.full_decription}>
 
                 <div className={style.card_title}>{title}</div>
-                <div className='card_title'>{'Категория: ' + category}</div>
-                <div className='card_price'>{'Цена: ' + price + '$'}</div>
+                <div >{'Категория: ' + category}</div>
+                <div >{'Цена: ' + price + '$'}</div>
                 <figcaption>{'Описание: ' + description}</figcaption>
                 <div>
                     <button className={style.button} onClick={handlerAddToChart}>В КОРЗИНУ</button>
                     <button className={style.button} onClick={handlerClick}>НАЗАД</button>
                 </div>
-
 
             </div>
 
