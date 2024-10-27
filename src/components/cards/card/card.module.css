@@ -9,6 +9,7 @@
     overflow: hidden;
     margin: 10px;
     width: calc(250px + (250 - 200) * ((100vw - 320px) / (1200 - 320)));
+    min-height: 320px; /*на экранах с маленькой высотой карточки сплющиваются */
     height: 45vh;
     background-color: #fff;
     box-shadow: 2px 2px 2px 0px rgba(34, 60, 80, 0.1);
