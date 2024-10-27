@@ -7,10 +7,13 @@ import SearchField from "./searchField/SearchField";
 import { CategoriesList } from "./categoriesList/CategoriesList";
 import style from './Cards.module.css';
 import SkeletonCard from "./card/SkeletonCard";
+import { useInView } from 'react-intersection-observer';
 
 
 
 export default function Cards() {
+
+    
 
     const value = useContext<Value>(Data);
 
