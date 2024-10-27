@@ -2,7 +2,7 @@
 .skeleton_card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -21,13 +21,6 @@
   align-items: center;
   justify-content: center;
   margin: auto;
-}
-
-/* Стили для изображения товара */
-.skeleton_card > img {
-  width: 100%;
-  /* max-height: 75%; */
-  height: auto;
 }
 
 /* Стили для содержимого карточки */

@@ -1,19 +1,15 @@
-import React, { useContext} from "react";
+import React, { useContext } from "react";
 import Data from "../../data/context/context";
 import Product from "../../data/interfaces/Product";
-import Card from "./card/card";
+import LazyCard from "./card/LazyCard";
 import Value from "../../data/interfaces/Category";
 import SearchField from "./searchField/SearchField";
 import { CategoriesList } from "./categoriesList/CategoriesList";
 import style from './Cards.module.css';
 import SkeletonCard from "./card/SkeletonCard";
-import { useInView } from 'react-intersection-observer';
-
-
 
 export default function Cards() {
 
-    
 
     const value = useContext<Value>(Data);
 
@@ -45,17 +41,15 @@ export default function Cards() {
 
 
             <div className={style.cards}>
-                {loading ? 
-                    Array(9)
+                {loading ?
+                    Array(4)
                         .fill('')
-                        .map((item, index) => <SkeletonCard key={index} />) 
-                        :
+                        .map((_, index) => <SkeletonCard key={index} />)
+                    :
                     value.products
                         .filter(product => product.title.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
                         .filter(product => product.category.toLocaleLowerCase().includes(category.toLocaleLowerCase()))
-                        .map((product: Product) => (
-                            <Card key={product.id} {...product} />
-                        ))
+                        .map((product: Product) => (<LazyCard key={product.id} {...product} />))
                 }
             </div>
         </div>
